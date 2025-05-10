@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/49a5d726e9.js" crossorigin="anonymous"></script>
+   
+
+<body>
+
+
+        <!-- Firebase SDKs (add these if not already included) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+
+      
+       
+  <nav class=" custom-button-1 navbar navbar-expand-lg navbar-light bg-light  fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png" class="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto">
+        <a class="nav-link active"  href="#whychooseus"> WHY CHOOSE US <span class="sr-only">(current)</span></a>
+        <a class="nav-link" id="nav-2" href="#explore">EXPLORE</a>
+        <a class="nav-link" id="nav-3" href="#payment">DELIVERY $ PAYMENT</a>
+        <a class="nav-link" id="nav-4" href="#follow">FOLLOW US</a>
+        <button class="btn btn-outline-success ml-2" id="cart-toggle-btn">
+            <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+          </button>
+          
+          
+          
+
+        <button id="logout-btn" class="btn btn-danger ml-2">Logout</button>
+
+      </div>
+  </nav>
+
+
+<div class="img-con">
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-12 d-flex flex-column   justify-content-center  align-items-center"  style="height: 100vh;" >
+        <div class="text-content">
+          <h1 class="head">Get delicious food Any time</h1>
+          <p class="para ">Eat smart and healthy</p>
+        </div>
+           
+        <div class="ss">
+          <button class="btn btn-warning mr-3" id="why-card">view more</button>
+          <button class="btn btn-outline-warning" id="Explore-con">Order-now</button>
+
+
+        </div>
+      
+      </div>
+        
+  
+    </div>
+  </div>
+</div>
+   <div class="why-card mb-3" id="whychooseus">
+   <div class="container-fluid">
+    <div class="row">
+      <div class=" col-12">
+        <h1 class="heading pt-5 pb-3">Why choose us</h1>
+        <p class="para-why pb-3"> We use both original recipes and classic versions of famous food
+          items.</p>
+         </div>
+         <div class=" wcu  mb-3 shadow  col-12 col-md-4">
+          <div class="food-con ">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-serve.png" class="food-logo"/>
+            <h1 class="wcu-card-title mt-3">Food Service</h1>
+            <p class="wcu-card-description pb-5">
+                Experience fine dining at the comfort of your home. All our
+                orders are carefully packed and arranged to give you the nothing
+                less than perfect.
+            </p>
+          </div>
+        </div>
+
+        <div class=" wcu shadow  mb-3 col-12 col-md-4 ">
+          <div class="food-con">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/fruits-img.png" class="food-logo"/>
+            <h1 class="wcu-card-title mt-3">Fresh food</h1>
+            <p class="wcu-card-description pb-3">
+              The Fresh Food group provides fresh-cut fruits and vegetables
+              directly picked from our partner farms and farm houses so that
+              you always get them tree to plate..
+            </p>
+          </div>
+          </div>
+
+
+          <div class=" wcu shadow  mb-3 col-12 col-md-4 ">
+          <div class="food-con">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/offers-img.png" class="food-logo"/>
+            <h1 class="wcu-card-title mt-3">  Best ofers</h1>
+            <p class="wcu-card-description pb-3">
+              Food Coupons &50% offers upto  <span class="Offers">50% off</span> and Exclusive Promo Codes on All Online Food Orders.
+          </div>
+        </div>
+
+    </div>
+   </div>
+     </div>
+     <div class ="Explore-con" id="explore">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            
+              <h1 class="heading">Explore menu</h1>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">Veg Starters</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="font-weight-bold text-success">₹150</span>
+                  <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="150">Add to Cart</button>
+                </div>
+                
+                
+              </div> 
+            </div>
+
+
+            <!---
+            <div class="col-12 col-md-6 col-lg-3">
+                    <div class="shadow menu-item-card p-3 mb-3">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Non-Veg Starters</h1>
+                        <a href="" class="menu-item-link">
+                            View All
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            
+            -->
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">veg starters</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-weight-bold text-success">₹200</span>
+                    <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="200">Add to Cart</button>
+                  </div>
+              </div> 
+            </div> 
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">Soups</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-weight-bold text-success">₹50</span>
+                    <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="50">Add to Cart</button>
+                  </div>
+              </div> 
+            </div>
+
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">Fish and sea food</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-weight-bold text-success">₹180</span>
+                    <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="180">Add to Cart</button>
+                  </div>
+              </div> 
+            </div>
+    
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">Main Dish</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-weight-bold text-success">₹250</span>
+                    <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="250">Add to Cart</button>
+                  </div>
+              </div> 
+            </div>
+
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">salad</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-weight-bold text-success">₹50</span>
+                    <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="50">Add to Cart</button>
+                  </div>
+              </div> 
+            </div>
+
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">Deserrts</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-weight-bold text-success">₹150</span>
+                    <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="150">Add to Cart</button>
+                  </div>
+              </div> 
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="menu-whole  shadow mb-3 p-3">
+                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-img w-100"/>
+              
+                <h1 class="menu-head">noodles</h1>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-weight-bold text-success">₹100</span>
+                    <button class="btn btn-sm btn-warning add-to-cart" data-name="Veg Starters" data-price="100">Add to Cart</button>
+                  </div>
+              </div> 
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      
+
+
+      
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12  col-md-5">
+              <div class="heal-image text-center">
+                <img src=" https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/healthy-food-plate-img.png" class="heal-logo w-50"/>
+              </div>
+              </div>
+              <div class=" pt-5 col-12 col-md-7">
+                <h1 class="heal-head">Fresh, Healthy, Organic, Delicious Fruits</h1>
+                <p class="heal-para">Say no to harmful chemicals and go fully organic with our range of
+                  fresh fruits and veggies. Pamper your body and your senses with
+                  the true and unadulterated gifts from mother nature. with the true
+                  and unadulterated gifts from mother nature.</p>
+                  <button class="btn btn-warning mr-3">Watch video</button>
+              </div>
+          
+        
+      </div>   
+      </div>  
+
+      <div class=" mt-3 container-fluid" id="payment">
+        <div class="row">
+          <div class="col-12 col-md-5 order-md-2">
+            <div class="vio-img">
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/delivery-payment-section-img.png" class="vio-img1 w-50"/>
+
+            </div>
+          </div>
+            <div class=" d-flex flex-column justify-content-center col-12 col-md-7 order-md-1">
+              <div class=" ss ">
+              <h1 class= "heal-head">
+                Delivery and Payment
+              </h1>
+              <p class=" heal-para">Enjoy hassle-free payment with the plenitude of payment options
+                available for you. Get live tracking and locate your food on a
+                live map. It's quite a sight to see your food arrive to your door.
+                Plus, you get a 5% discount on every order every time you pay
+                online.</p>
+                <button class="btn btn-warning mr-3">Watch video</button>
+
+                <div class="mt-3">
+                  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/visa-card-img.png" class="payment-card-img"  />
+                  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/master-card-img.png" class="payment-card-img"  />
+                  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/paypal-card-img.png" class="payment-card-img" />
+                  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/american-express-img.png" class="payment-card-img" />
+              </div>
+              
+              </div>
+            
+              </div>
+
+           
+            
+
+          </div>
+        </div>
+
+
+        <div class=" m-3 pl-3 mb-3 gift-sec thanking-customers-section">
+        <div class=" mt-3 contatiner-fluid">
+          <div class="row">
+            
+              <div class="pt-5  d-flex flex-column justify-content-center col-12  col-md-7  ">
+                <h1 class="heal-head"> Thank you for being a valuable customer to us.</h1>
+                <p class="heal-para"> We have a surprise gift for you</p>
+                              
+
+                <div class=" d-md-none">
+                  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class=" gift-sec-img w-50"/>
+                </div>
+                <div class="bbbb mb-3 ">
+                 
+
+                 <!-- Button trigger modal -->
+<button type="button" class="custom-button" data-toggle="modal" data-target="#exampleModal">
+  Redeem Gift
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog mt-5">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">vocher card</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img
+        src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/gift-voucher-img.png"
+        class="w-100"/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+                </div>
+              </div>
+            
+                <div class=" col-12 d-none col-md-5  d-md-block ">
+                  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="   gift-sec-img w-50"/>
+                </div>
+              
+              </div>
+            
+
+          </div>
+        </div>
+      
+      <div class="follow-us-section" id="follow">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="follow-us-section-heading">Follow us</h1>
+              <div class="d-flex flex-row justify-content-center">
+              <div class="follow-us-icon-container">
+              <i class="fa-brands fa-twitter twiter" ></i>
+            </div>
+
+            <div class="follow-us-icon-container">
+              <i class="fa-brands fa-instagram twiter"></i>
+            </div>
+
+            <div class="follow-us-icon-container">
+              <i class="fa-brands fa-linkedin twiter"></i>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="footer-sec">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                  <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-logo-light.png" class="foter-logo"/>
+              
+              <h1 class="footer-section-mail-id">orderfood@foodmunch.com</h1>
+              <p class="heal-para"></p>
+                  123 Ayur Vigyan Nagar, New Delhi, India.
+              </p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <script>
+            document.getElementById('Explore-con').onclick = function() {
+              document.getElementById('explore').scrollIntoView({ behavior: 'smooth' });
+            };
+          </script>
+          
+          <script>
+            document.getElementById('why-card').onclick = function() {
+              document.getElementById('whychooseus').scrollIntoView({ behavior: 'smooth' });
+            };
+          </script>
+          
+         
+            
+            
+                    
+                    
+
+
+
+                     
+
+
+ 
+  
+
+
+  
+  <script>
+    let cart = [];
+    
+    function updateCart() {
+      const cartList = document.getElementById('cart-list');
+      const cartTotal = document.getElementById('cart-total');
+      const cartCount = document.getElementById('cart-count');
+      cartList.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, idx) => {
+        total += item.price;
+        const li = document.createElement('li');
+        li.className = "list-group-item d-flex justify-content-between align-items-center";
+        li.textContent = item.name + " - ₹" + item.price;
+        // Remove button
+        const removeBtn = document.createElement('button');
+        removeBtn.className = "btn btn-sm btn-danger";
+        removeBtn.textContent = "Remove";
+        removeBtn.onclick = () => {
+          cart.splice(idx, 1);
+          updateCart();
+        };
+        li.appendChild(removeBtn);
+        cartList.appendChild(li);
+      });
+      cartTotal.textContent = total;
+      if (cartCount) cartCount.textContent = cart.length;
+      document.getElementById('place-order-btn').disabled = cart.length === 0;
+    }
+    
+    // Attach event listeners after DOM is loaded
+    window.onload = function() {
+      // Add to cart
+      document.querySelectorAll('.add-to-cart').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const name = this.getAttribute('data-name');
+          const price = parseInt(this.getAttribute('data-price'));
+          cart.push({name, price});
+          updateCart();
+          document.getElementById('cart-sidebar').style.right = '0';
+        });
+      });
+    
+      // Cart sidebar open/close
+      document.getElementById('cart-toggle-btn').onclick = function() {
+        document.getElementById('cart-sidebar').style.right = '0';
+      };
+      document.getElementById('cart-close-btn').onclick = function() {
+        document.getElementById('cart-sidebar').style.right = '-400px';
+      };
+    
+      updateCart();
+    };
+    </script>
+    
+
+              
+  <div id="cart-sidebar" style="position:fixed;top:0;right:-400px;width:350px;height:100vh;z-index:1050;background:#fff;box-shadow:-2px 0 10px rgba(0,0,0,0.15);transition:right 0.3s;padding:20px;overflow-y:auto;">
+    <h4>Your Cart <button class="close float-right" id="cart-close-btn">&times;</button></h4>
+    <ul id="cart-list" class="list-group mb-3"></ul>
+    <div>
+      <strong>Total: ₹<span id="cart-total">0</span></strong>
+    </div>
+    <button class="btn btn-success mt-3" id="place-order-btn" disabled>Place Order</button>
+    <div id="order-message" class="mt-3 text-success"></div>
+  </div>
+  
+  <!-- (Line: very end, before </body>) -->
+<!-- Address Modal -->
+<div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form id="address-form" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addressModalLabel">Enter Delivery Address</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="customerName">Name</label>
+            <input type="text" class="form-control" id="customerName" required>
+          </div>
+          <div class="form-group">
+            <label for="customerPhone">Phone</label>
+            <input type="tel" class="form-control" id="customerPhone" required>
+          </div>
+          <div class="form-group">
+            <label for="customerAddress">Address</label>
+            <textarea class="form-control" id="customerAddress" rows="2" required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">Save and Place Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  // (Line 2) Show address modal when Place Order is clicked
+  <script>
+document.getElementById('place-order-btn').onclick = function() {
+  $('#addressModal').modal('show');
+};
+
+// (Line 3) Handle address form submission
+document.getElementById('address-form').onsubmit = function(e) {
+  e.preventDefault();
+  // You can grab the values if needed:
+  // const name = document.getElementById('customerName').value;
+  // const phone = document.getElementById('customerPhone').value;
+  // const address = document.getElementById('customerAddress').value;
+
+  $('#addressModal').modal('hide');
+  setTimeout(() => {
+    document.getElementById('order-message').textContent = "Order placed successfully! 🎉";
+    // Clear cart here if you want
+    setTimeout(() => {
+      document.getElementById('order-message').textContent = "";
+    }, 2500);
+  }, 500);
+};
+
+</script>
+
+<script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyACXK1IEWRxDgQedx48hZ8ynGPp3Ps2ECE",
+      authDomain: "food-webapp-eaabe.firebaseapp.com",
+      projectId: "food-webapp-eaabe",
+      storageBucket: "food-webapp-eaabe.appspot.com",
+      messagingSenderId: "390422153411",
+      appId: "1:390422153411:web:23f55aabbf0aa48ff93a76"
+    };
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig);
+    }
+  
+    // --- LOGOUT FIX START ---
+    let isLoggingOut = false;
+  
+    // Auth state observer
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (!user && !isLoggingOut) {
+        window.location.href = "login.html";
+      }
+    });
+  
+    // Logout button handler
+    document.addEventListener("DOMContentLoaded", function() {
+      var logoutBtn = document.getElementById('logout-btn');
+      if (logoutBtn) {
+        logoutBtn.onclick = function() {
+          isLoggingOut = true;
+          firebase.auth().signOut().then(function() {
+            window.location.href = "login.html";
+          });
+        };
+      }
+    });
+    // --- LOGOUT FIX END ---
+  </script>
+  
+</head>
+</body>
+</html>
