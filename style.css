@@ -1,0 +1,166 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    scroll-behavior: smooth;
+    
+  }
+  #nav-2{
+      color: #323f4b;
+    font-family: "Roboto";
+  }
+  #nav-3{
+      color: #323f4b;
+    font-family: "Roboto";
+  }
+  #nav-4{
+      color: #323f4b;
+    font-family: "Roboto";
+  }
+  .logo{
+      height:50px;
+      width:45px;
+  }
+  
+  .img-con{
+      background-image: url('https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png');
+      height:100vh;
+      background-size: cover;
+  }
+  .head{
+      color: white;
+    font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+  }
+  .para{
+      color: #f5f7fa;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+    text-align:center;
+  }
+  .heading{
+      color: black;
+      font-family: "Roboto";
+    font-size: 45px;
+    font-weight: 300;
+  
+  }
+  .par-why{
+      color:#323f4b;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300px;
+  }
+  .food-logo{
+      height:50px;
+      width: 70px;
+  }
+  
+  .wcu-card-title{
+      color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .wcu-card-description{
+      color: #5a7184;
+      font-family: "Roboto";
+      font-size: 16px;
+  }
+  .wcu{
+      background-color: #f9fbfe;
+      border-radius: 8px;
+      text-align:center
+  }
+  .menu-img{
+      border-radius: 8px;
+  }
+  
+  .heading{
+      color: #183b56;
+      font-family: "Roboto";
+      font-size: 28px;
+      font-weight: 700;
+  }
+  .menu-whole{
+      border-radius: 10px;
+  }
+  .heal-head{
+      color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .heal-para{
+      color: #5a7184;
+    font-family: "Roboto";
+    font-size: 16px;
+  }
+  .payment-card-img{
+      height:50px;
+      width: 45px;
+      margin-right:10px;
+  }
+  .gift-sec{
+     background-color: #d0b2001a;
+  }
+  .bbb{
+      margin-right: 5px;
+  }
+  .follow-us-section-heading {
+      font-family: "Roboto";
+      font-weight: 700;
+      font-size: 28px;
+      color: #183b56;
+      text-align: center;
+    }
+    .footer-sec{
+      background-color:#fae38c
+    }
+  .follow-us-section{
+            background-color: white;
+  }
+  .foter-logo{
+      height: 50px;
+      width: 65px;
+  }
+  .footer-section-mail-id {
+      color: #959ead;
+      font-family: "Roboto";
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .twiter{
+      font-size: 35px;
+      color: #d0b200;
+    }
+    .follow-us-icon-container{
+      width: 80px;
+      height: 80px;
+      background-color: #faf7e8;
+      padding: 22px 14px 16px 22px;
+      margin: 15px;
+      border-radius: 40px;
+    }
+    .thanking-customers-section-modal-title {
+      color: #d0b200;
+      font-weight: 800;
+    }
+    .thanking-customers-section {
+      background-image: radial-gradient(#fff8db, #fae38c);
+    }
+    .custom-button {
+      color: white;
+      background-image: linear-gradient(#d0b200, #a58d00);
+      width: 130px;
+      height: 45px;
+      border-width: 0;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+    .custom-button-1{
+      background-image: linear-gradient(#d0b200, #a58d00);
+    }
